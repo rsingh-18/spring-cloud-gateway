@@ -1,0 +1,11 @@
+server:
+  port: 1001
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: app1Api
+        uri: http://localhost:1000/
+        predicates:
+        - Path=/test
